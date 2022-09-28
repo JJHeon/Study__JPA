@@ -5,11 +5,7 @@ plugins {
 group 'jpa.example'
 version '1.0-SNAPSHOT'
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
+
 
 repositories {
     mavenCentral()
@@ -25,11 +21,6 @@ dependencies {
     implementation('com.h2database:h2:1.4.199')
     testImplementation('org.hibernate:hibernate-entitymanager:5.3.10.Final')
 
-    //lombok
-    implementation 'org.springframework.boot:spring-boot-starter'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
